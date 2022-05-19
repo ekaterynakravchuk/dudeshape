@@ -445,9 +445,6 @@
         margin-bottom: 35px;
         max-width: 500px;
     }
-    &__slider {
-        overflow: hidden;
-    }
     &__item {
         max-width: 470px;
         padding-top: 5px;
@@ -633,6 +630,87 @@
         object-fit: cover;
     }
 }
+
+.blog {
+    &__inner {
+        padding-bottom: 150px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__info {
+        max-width: 430px;
+        width: 100%;
+        flex-shrink: 0;
+    }
+    &__subtitle {
+        display: inline-block;
+        @extend %subtitle-font;
+        margin-bottom: 20px;
+    }
+    &__title {
+        @extend %title-font;
+        margin-bottom: 15px;
+        max-width: 306px;
+    }
+    &__text {
+        font-family: 'AvenirNextLTPro';
+        font-size: 14px;
+        color: $grey;
+    }
+    &__slider {
+        max-width: 840px !important;
+        width: 100%;
+    }
+    &__item-wrapp {
+        padding: 0 10px;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    &__item-img {
+        border-radius: 15px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    &__item-title {
+        font-size: 30px;
+        margin-bottom: 20px;
+        color: #000;
+    }
+    &__item-text {
+        font-size: 14px;
+        color: $grey;
+    }
+    & .slick-arrow {
+        position: absolute;
+        top: 80%;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #FFF1F0;
+        border: 1px solid #FFF1F0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .3s;
+        &:hover {
+            background-color: transparent;
+            border: 1px solid #FED4CD;
+        }
+    }
+    &__prev-arrow {
+        left: -445px;
+    }
+    &__next-arrow {
+        left: -340px;
+    }
+}
+
 
 
 .footer {
