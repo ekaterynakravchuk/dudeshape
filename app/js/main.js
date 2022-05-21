@@ -39,7 +39,14 @@ $(function () {
     $('.header__burger').on('click', function(e) {
         e.preventDefault();
         $('.header__menu').toggleClass('open');
-    })
+    });
+    // close click outside
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest('.header').length) {
+          $('.header__menu').removeClass('open');
+        }
+        e.stopPropagation();
+      });
 });
 
 // smooth scroll
